@@ -14,7 +14,7 @@ target = [1 0 0 0 0 0 0 0 0 0];
 
 
 for i=1:m
-    input = train0(i,:);
+    input = double(train0(i,:));
     outs = Network(numNeurons, numHidLayers,input,weight);
     error = abs(target - outs{length(outs)});
     weight = backwards(outs, weight, error);
@@ -26,7 +26,7 @@ target = [0 1 0 0 0 0 0 0 0 0];
 [m,n] = size(train1);
 
 for i=1:m
-    input = train1(i,:);
+    input = double(train1(i,:));
     outs = Network(numNeurons,numHidLayers,input,weight);
     error = abs(target - outs{length(outs)});
     weight = backwards(outs, weight, error);
@@ -39,7 +39,7 @@ target = [0 0 1 0 0 0 0 0 0 0];
 [m,n] = size(train2);
 
 for i=1:m
-    input = train2(i,:);
+    input = double(train2(i,:));
     outs = Network(numNeurons, numHidLayers,input,weight);
     error = abs(target - outs{length(outs)});
     weight = backwards(outs, weight, error);
@@ -51,7 +51,7 @@ target = [0 0 0 1 0 0 0 0 0 0];
 [m,n] = size(train3);
 
 for i=1:m
-    input = train3(i,:);
+    input = double(train3(i,:));
     outs = Network(numNeurons, numHidLayers,input,weight);
     error = abs(target - outs{length(outs)});
     weight = backwards(outs, weight, error);
@@ -65,7 +65,7 @@ target = [0 0 0 0 1 0 0 0 0 0];
 [m,n] = size(train4);
 
 for i=1:m
-    input = train4(i,:);
+    input = double(train4(i,:));
     outs = Network(numNeurons,numHidLayers,input,weight);
     error = abs(target - outs{length(outs)});
     weight = backwards(outs, weight, error);
@@ -76,7 +76,7 @@ target = [0 0 0 0 0 1 0 0 0 0];
 [m,n] = size(train5);
 
 for i=1:m
-    input = train5(i,:);
+    input = double(train5(i,:));
     outs = Network(numNeurons,numHidLayers,input,weight);
     error = abs(target - outs{length(outs)});
     weight = backwards(outs, weight, error);
@@ -87,7 +87,7 @@ target = [0 0 0 0 0 0 1 0 0 0];
 [m,n] = size(train6);
 
 for i=1:m
-    input = train6(i,:);
+    input = double(train6(i,:));
     outs = Network(numNeurons,numHidLayers,input,weight);
     error = abs(target - outs{length(outs)});
     weight = backwards(outs, weight, error);
@@ -99,7 +99,7 @@ target = [0 0 0 0 0 0 0 1 0 0];
 [m,n] = size(train7);
 
 for i=1:m
-    input = train7(i,:);
+    input = double(train7(i,:));
     outs = Network(numNeurons,numHidLayers,input,weight);
     error = abs(target - outs{length(outs)});
     weight = backwards(outs, weight, error);
@@ -110,7 +110,7 @@ target = [0 0 0 0 0 0 0 0 1 0];
 [m,n] = size(train8);
 
 for i=1:m
-    input = train8(i,:);
+    input = double(train8(i,:));
     outs = Network(numNeurons,numHidLayers,input,weight);
     error = abs(target - outs{length(outs)});
     weight = backwards(outs, weight, error);
@@ -121,7 +121,7 @@ target = [0 0 0 0 0 0 0 0 0 1];
 [m,n] = size(train9);
 
 for i=1:m    
-    input = train9(i,:);
+    input = double(train9(i,:));
     outs = Network(numNeurons,numHidLayers,input,weight);
     error = abs(target - outs{length(outs)});
     weight = backwards(outs, weight, error);   
